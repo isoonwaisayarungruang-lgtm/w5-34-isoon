@@ -37,22 +37,55 @@ export default function  add
     } 
 
     return(
-        <View style={{ backgroundColor:"lightblue",flex:1,alignItems:"center",gap:10}}>
-            <Text>ชื่อหนังสือ</Text>
+        <View style={mystyle.container}>
+            <View style={mystyle.container1}>
+            <Text  style={mystyle.text}>ชื่อหนังสือ</Text>
             <TextInput  value={bookName} onChangeText={setBookName}  style={mystyle.input}/>
-            <Text>ราคาหนังสือ</Text>
+            <Text style={mystyle.text}>ราคาหนังสือ</Text>
             <TextInput  value={bookPrice} onChangeText={setBookPrice}  style={mystyle.input}/>
             <Button title="บันทึก" onPress={() => addBook()}  />
+
+            </View>
         </View>
     )
 }
 
 const mystyle = StyleSheet.create({
-    input:{
-        borderWidth:1,
-        width:"80%",
-        gap:10
-    }
+ container:{
+    flex : 1,
+    alignItems :"center",
+    backgroundColor:"#FFE6EA"
+ },
+ container1:{
+    width :"85%",
+    backgroundColor:"white",
+    height :250,
+    marginTop :50,
+    alignItems :"center",
+    borderRadius:10,
+    padding :20
+ },
+ input:{
+    textAlign : "center",
+    alignItems :"center",
+    borderWidth: 1,
+    width :"70%",
+    borderRadius : 5
+ },
+ text:{
+    fontWeight :600,
+    margin :10
+ },
+ button:{
+    backgroundColor :"B8D4FF",
+    padding :8,
+    marginTop :10,
+    borderRadius : 5,
+    width : 70,
+    alignItems:"center"
+ }
+
+
 
 
 })
